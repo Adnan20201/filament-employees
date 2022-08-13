@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\State;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Country extends Model
 {
@@ -11,7 +12,7 @@ class Country extends Model
     protected $fillable = ['country_code','name'];
 
     public function state(){
-        return $this->hasMany(State::class);
+        return $this->belongsTo(State::class);
     }
 
     public function employee(){

@@ -29,8 +29,7 @@ class StateResource extends Resource
             ->schema([
                 Card::make()
                 ->schema([
-                    Select::make('country_id')
-                     ->relationship('country', 'name'),
+                    Select::make('country_id')->relationship('country', 'name'),
                     TextInput::make('name'),
                  ])
             ]);
